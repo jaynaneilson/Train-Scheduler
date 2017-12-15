@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>Train Scheduler</title>
+
+		<!--Let browser know website is optimized for mobile-->
+      	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<!--Import Google Icon & Font-->
+      	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+      	<link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+
+      	<!--Import materialize.css-->
+      	<link type="text/css" rel="stylesheet" href="assets/css/materialize.css"  media="screen,projection"/>
+
+      	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+      	<link type="text/css" rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+	<div class="train-image faux-bg"></div>
+	<div class="gradient-image faux-bg"></div>
+
+    <div class="wrapper-container">
+      
+		<div id="index-banner" class="parallax-container">
+    		<div class="header-section no-pad-bot">
+      			<div class="container">
+
+      				<div class="row center">
+						<h1 class="header-train center white-text bold">TRAIN</h1>
+        				<h1 class="header-scheduler center white-text bold">SCHEDULER</h1>
+          				<h4 class="header white-text thin">Catch the next train!</h4>
+        			</div>
+   				</div>
+    		</div>
+  		</div>
+
+  		<div class="container">
+    		<div class="section">
+
+    			<h5 class="train-schedule white-text red lighten-2">Current Train Schedule</h5>
+
+     			<table class="striped centered responsive" id='trainSchedule'>
+     				<div class="row">
+
+        				<thead class="col s12">
+          					<tr>
+              				<th>Train Name</th>
+              				<th>Destination</th>
+              				<th>Frequency(min)</th>
+              				<th>Next Arrival</th>
+              				<th>Minutes Away</th>
+          					</tr>
+        				</thead>
+    				</div>
+
+        				<tbody></tbody>
+
+      			</table>
+
+    		</div>
+  		</div>
+
+
+  		<div class="container">
+    		<div class="section">
+
+    			<h5 class="white-text red lighten-2">Add Train</h5>
+
+      				<div class="row-form">
+
+    					<form class="col s12">
+      
+       						<div class="row">
+
+       							<div class="row">
+        							<div class="input-field col s12">
+          								<i class="material-icons prefix">train</i>
+          								<textarea class="materialize-textarea" id="trainNameForm"></textarea> 
+          								<label for="icon_prefix2">Train Name</label>
+        							</div>
+      							</div>
+
+
+        						<div class="row">
+        							<div class="input-field col s12">
+          								<i class="material-icons prefix">place</i>
+          								<textarea class="materialize-textarea" id="destinationForm"></textarea>
+          								<label for="icon_prefix2">Destination</label>
+        							</div>
+      							</div>
+
+        						<div class="row">
+       								<div class="input-field col s12">
+          								<i class="material-icons prefix">access_time</i>
+          								<textarea class="materialize-textarea" id="firstTrainForm"></textarea>
+          								<label for="icon_prefix2">First Train Time (HH:mm - military time)</label>
+        							</div>
+      							</div>
+
+        						<div class="row">
+        							<div class="input-field col s12">
+          								<i class="material-icons prefix">timelapse</i>
+          								<textarea class="materialize-textarea" id="frequencyForm"></textarea>
+          								<label for="icon_prefix2">Frequency (min)</label>
+        							</div>
+      							</div>
+
+
+        						<div class="row center">
+          							<button class="btn waves-effect waves-light btn-large red lighten-2" id=submitButton type="submit" name="action">Submit</button>
+        						</div>
+
+
+      						</div>
+    					</form>
+  					</div>
+  
+  			</div>
+      	</div>
+
+ 	</div>
+
+  <footer class="page-footer red lighten-2">
+   
+    <div class="footer-copyright">
+      <div class="container">
+      <a class="white-text">Copyright &copy; 2017 Jayna Neilson</a>
+      </div>
+    </div>
+  </footer>
+
+
+ <!--Import jQuery before materialize.js-->
+      <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+      <script type="text/javascript" src="assets/javascript/app.js"></script>
+      <script type="text/javascript" src="assets/javascript/materialize.js"></script>
+      
+
+</body>
+
+</html>

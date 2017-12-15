@@ -1,0 +1,96 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+
+.faux-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+}
+
+.train-image {
+  background-image: url(../images/train.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.gradient-image {
+  background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+  opacity: 0.9;
+}
+
+ .image {
+  position: absolute;
+  width: 100%;
+ }
+
+ .wrapper-container {
+  position: relative;
+ }
+
+.header-train{
+  font-family: Monoton;
+  font-size: 100px;
+
+}
+
+ .section {
+  background-color: white;
+  padding-top: 0;
+  margin-bottom: 30px;
+  border-radius: 15px;
+ }
+
+ h5 {
+  padding-left: 10px;
+ }
+
+ .row-form{
+  padding: 20px;
+ }
+
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+  margin-bottom: 100px;
+}
+
+.parallax-container .section {
+    width: 100%;
+  }
+
+.page-footer{
+  position: relative;
+  text-align: center;
+}
+
+.input-field .prefix.active {
+  color: #e57373;
+}
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
