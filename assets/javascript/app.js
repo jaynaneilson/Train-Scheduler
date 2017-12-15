@@ -30,14 +30,34 @@ $(document).ready(function() {
     var firstTrain = $("#firstTrainForm").val().trim();
     var frequency = $("#frequencyForm").val().trim();
 
+    //Makes sure User fills out all form input
+    if (trainName == "") {
+        alert('Enter a train name.');
+        return false;
+    };
 
-  //Push
-    database.ref().push({
-    trainName: trainName,
-    destination: destination,
-    firstTrain: firstTrain,
-    frequency: frequency,
-  });
+    if (destination == "") {
+        alert('Enter a destination.');
+        return false;
+    };
+
+    if (firstTrain == "") {
+        alert('Enter a first train time.');
+        return false;
+    };
+
+    if (frequency == "") {
+        alert('Enter a frequency');
+        return false;
+    };
+
+    //Push
+      database.ref().push({
+      trainName: trainName,
+      destination: destination,
+      firstTrain: firstTrain,
+      frequency: frequency,
+    });
 
   //Clear Forms
   $("#trainNameForm").val("");
@@ -58,9 +78,8 @@ $(document).ready(function() {
     var frequency = childSnapshot.val().frequency;
 
 
-
-    var currentTime = moment();
     var firstTrainConverted = moment(firstTrain, "hh:mm").subtract(1, "years");
+    var currentTime = moment();
 
     // the time difference between current time and the first train
     var difference = currentTime.diff(moment(firstTrainConverted), "minutes");
@@ -68,7 +87,7 @@ $(document).ready(function() {
     var minUntilTrain = frequency - remainder;
     var nextTrain = moment().add(minUntilTrain, "minutes").format("hh:mm");
 
-    $("#trainSchedule > tbody").append("<tr><td>" + trainName +
+    $("#trainSchedule").append("<tr><td>" + trainName +
                                     "</td><td>" + destination +
                                     "</td><td>" + frequency +
                                     "</td><td>" + minUntilTrain + 
